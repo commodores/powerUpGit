@@ -63,9 +63,22 @@ public class driveTrain extends Subsystem {
         // Put code here to be run every loop
 
     }
-
-    // Put methods for controlling this subsystem
-    // here. Call these from Commands.
+    
+    public void drive(double left, double right) {
+    	differentialDrive.tankDrive(left, right);
+    }
+    
+    public void stop() {
+    	differentialDrive.stopMotor();
+    }
+    
+    public double getEncoderDistance() {
+    	return leftEncoder.getDistance();
+    }
+    
+    public void resetEncoder() {
+    	leftEncoder.reset();
+    }
 
 }
 

@@ -62,7 +62,7 @@ public class elevator extends Subsystem {
     }
     
     public void elevatorDown() {
-    	if(!elevatorUpLimit.get()) {
+    	if(!elevatorDownLimit.get()) {
     		elevatorMotor.set(-.5);
     	}
     }

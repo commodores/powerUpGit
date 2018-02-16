@@ -15,7 +15,7 @@ Children:
               default: '2'
               name: CAN ID
               validators: &id002 [CANID]
-              value: '5'
+              value: '0'
           Base: Talon SRX
           Name: leftFrontMotor
         - Children: []
@@ -25,7 +25,7 @@ Children:
               default: '2'
               name: CAN ID
               validators: *id002
-              value: '8'
+              value: '1'
           Base: Talon SRX
           Name: leftRearMotor
         Properties:
@@ -57,7 +57,7 @@ Children:
               default: '2'
               name: CAN ID
               validators: *id002
-              value: '6'
+              value: '3'
           Base: Talon SRX
           Name: rightFrontMotor
         - Children: []
@@ -67,7 +67,7 @@ Children:
               default: '2'
               name: CAN ID
               validators: *id002
-              value: '7'
+              value: '2'
           Base: Talon SRX
           Name: rightRearMotor
         Properties:
@@ -831,7 +831,7 @@ Children:
   Base: Commands
   Name: Commands
 Properties:
-  Eclipse Workspace: !!robotbuilder.data.properties.FileProperty {default: 'C:\Users\darren.hagler\workspace',
+  Eclipse Workspace: !!robotbuilder.data.properties.FileProperty {default: 'C:\Users\User\workspace',
     extension: null, folder: true, name: Eclipse Workspace, validators: null, value: .\}
   Export Commands: !!robotbuilder.data.properties.BooleanProperty {default: true,
     name: Export Commands, validators: null, value: true}
@@ -850,7 +850,7 @@ Properties:
     name: Export Subsystems, validators: null, value: true}
   Simulation World File: !!robotbuilder.data.properties.StringProperty {default: /usr/share/frcsim/worlds/GearsBotDemo.world,
     name: Simulation World File, validators: null, value: /usr/share/frcsim/worlds/GearsBotDemo.world}
-  Wiring file location: !!robotbuilder.data.properties.FileProperty {default: 'C:\Users\darren.hagler\',
+  Wiring file location: !!robotbuilder.data.properties.FileProperty {default: 'C:\Users\User\',
     extension: null, folder: true, name: Wiring file location, validators: null, value: .\}
   Autonomous Command: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
     name: Autonomous Command, type: Command, validators: null, value: autoForward120}

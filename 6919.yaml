@@ -253,7 +253,7 @@ Children:
           default: '0'
           name: Input Channel (Digital)
           validators: &id009 [DigitalChannel]
-          value: '2'
+          value: '3'
       Base: Limit Switch
       Name: elevatorUpLimit
     - Children: []
@@ -263,7 +263,7 @@ Children:
           default: '0'
           name: Input Channel (Digital)
           validators: *id009
-          value: '3'
+          value: '2'
       Base: Limit Switch
       Name: elevatorDownLimit
     - Children: []
@@ -322,7 +322,7 @@ Children:
           default: '1'
           name: Button
           validators: null
-          value: '6'
+          value: '5'
         Command: !!robotbuilder.data.properties.TypeSelectionProperty
           default: None
           name: Command
@@ -351,7 +351,7 @@ Children:
           default: '1'
           name: Button
           validators: null
-          value: '5'
+          value: '6'
         Command: !!robotbuilder.data.properties.TypeSelectionProperty
           default: None
           name: Command

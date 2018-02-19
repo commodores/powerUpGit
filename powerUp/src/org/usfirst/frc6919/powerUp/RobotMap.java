@@ -90,10 +90,10 @@ public class RobotMap {
         intakeintakeMotors = new SpeedControllerGroup(intakeleftIntakeMotor, intakerightIntakeMotor  );
         LiveWindow.addActuator("intake", "intakeMotors", intakeintakeMotors);
         
-        elevatorelevatorUpLimit = new DigitalInput(2);
+        elevatorelevatorUpLimit = new DigitalInput(3);
         LiveWindow.addSensor("elevator", "elevatorUpLimit", elevatorelevatorUpLimit);
         
-        elevatorelevatorDownLimit = new DigitalInput(3);
+        elevatorelevatorDownLimit = new DigitalInput(2);
         LiveWindow.addSensor("elevator", "elevatorDownLimit", elevatorelevatorDownLimit);
         
         elevatorelevatorMotor = new Spark(0);

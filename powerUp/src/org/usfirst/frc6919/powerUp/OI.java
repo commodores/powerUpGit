@@ -73,9 +73,9 @@ public class OI {
         intakeOutBtn.whileHeld(new intakeOut());
         gamePad = new Joystick(0);
         
-        elevatorDownBtn = new JoystickButton(gamePad, 5);
+        elevatorDownBtn = new JoystickButton(gamePad, 6);
         elevatorDownBtn.whileHeld(new elevatorDown());
-        elevatorUpBtn = new JoystickButton(gamePad, 6);
+        elevatorUpBtn = new JoystickButton(gamePad, 5);
         elevatorUpBtn.whileHeld(new elevatorUp());
 
 

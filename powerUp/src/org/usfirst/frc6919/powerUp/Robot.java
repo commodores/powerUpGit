@@ -69,7 +69,6 @@ public class Robot extends TimedRobot {
         chooser.addObject("centerSwitch", new centerSwitch());
         chooser.addObject("rightSwitch", new rightSwitch());
         chooser.addObject("leftScale", new leftScale());
-        chooser.addObject("centerScale", new centerScale());
         chooser.addObject("rightScale", new rightScale());
         chooser.addDefault("autoForward120", new autoForward120());
 

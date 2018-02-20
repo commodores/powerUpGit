@@ -56,11 +56,11 @@ public class elevator extends Subsystem {
     }
 
     public void elevatorUp() {
-    		elevatorMotor.set(.5);
+    		elevatorMotor.set(-.75);
     }
     
     public void elevatorDown() {
-    		elevatorMotor.set(-.5);
+    		elevatorMotor.set(.5);
     }
     
     public void elevatorStop() {
@@ -76,7 +76,7 @@ public class elevator extends Subsystem {
     }
     
     public void elevatorHold() {
-    	elevatorMotor.set(.05);
+    	elevatorMotor.set(-.08);
     }
 
 }

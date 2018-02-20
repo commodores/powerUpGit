@@ -46,6 +46,7 @@ public class rightScale extends CommandGroup {
     	
     	addSequential(new autoForward324());
     	addSequential(new turnLeft90());
+    	addSequential(new autoReverse12());
     	addSequential(new elevatorUpScaleAuto());
     	addSequential(new intakeOutAuto());
     	

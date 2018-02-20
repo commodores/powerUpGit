@@ -20,6 +20,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import org.usfirst.frc6919.powerUp.commands.*;
 import org.usfirst.frc6919.powerUp.subsystems.*;
 import edu.wpi.first.wpilibj.CameraServer;
+import edu.wpi.first.wpilibj.DriverStation;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -95,7 +96,9 @@ public class Robot extends TimedRobot {
     @Override
     public void autonomousInit() {
         autonomousCommand = chooser.getSelected();
+        
         // schedule the autonomous command (example)
+        
         if (autonomousCommand != null) autonomousCommand.start();
     }
 

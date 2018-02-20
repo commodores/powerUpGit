@@ -11,6 +11,7 @@
 
 package org.usfirst.frc6919.powerUp.commands;
 
+import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.command.CommandGroup;
 import org.usfirst.frc6919.powerUp.subsystems.*;
 
@@ -47,8 +48,17 @@ public class rightSwitch extends CommandGroup {
     	addSequential(new turnLeft90());
     	addSequential(new elevatorUpSwitchAuto());
     	addSequential(new autoForward12());
-    	addSequential(new intakeOutAuto());
-    	
+    	String gameData;
+		
+    	gameData = DriverStation.getInstance().getGameSpecificMessage();
+        
+		if(gameData.length() > 0)
+		{
+			if(gameData.charAt(0) == 'R')
+			{
+				addSequential(new intakeOutAuto());
+			}
+		}
     	
     } 
 }

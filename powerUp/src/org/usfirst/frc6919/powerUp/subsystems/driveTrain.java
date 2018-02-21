@@ -51,6 +51,8 @@ public class driveTrain extends Subsystem {
     private final ADXRS450_Gyro gyro = RobotMap.driveTrainGyro;
     
     public final double driveTrainGain = .05;
+    
+    public final float cubicConstant = (float) 0.07;
 
     @Override
     public void initDefaultCommand() {
@@ -68,6 +70,20 @@ public class driveTrain extends Subsystem {
     public void periodic() {
         // Put code here to be run every loop
 
+    }
+    
+    public void takeJoystickInputs(float left, float right) {
+    	
+    	float cubedLeft = cubicScale(left);
+    	float cubedRight = cubicScale(right);
+    	
+    	differentialDrive.tankDrive(cubedLeft, cubedRight);
+    }
+    
+    private float cubicScale(float arg){
+    	float a;
+    	a = (float) (cubicConstant*arg + (1-cubicConstant)*Math.pow((double)arg, 3));
+    	return a;
     }
     
     public void drive(double left, double right) {

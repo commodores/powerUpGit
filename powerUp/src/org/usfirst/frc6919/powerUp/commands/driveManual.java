@@ -43,7 +43,18 @@ public class driveManual extends Command {
     // Called repeatedly when this Command is scheduled to run
     @Override
     protected void execute() {
-    	Robot.driveTrain.drive(-Robot.oi.gamePad.getRawAxis(1), -Robot.oi.gamePad.getRawAxis(5));
+    	//Get Inputs from Joystick
+    	float left = (float) Robot.oi.gamePad.getRawAxis(1);
+    	float right = (float) Robot.oi.gamePad.getRawAxis(5);
+    	//Clean it up    	
+    	if(Math.abs(left) <= 0.05){
+    		left = 0;
+    	}
+    	if(Math.abs(right) <= 0.05){
+    		right = 0;
+    	}
+    	//Send to subsystem method
+    	Robot.driveTrain.takeJoystickInputs(left, right);
     }
 
     // Make this return true when this Command no longer needs to run execute()

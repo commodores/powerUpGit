@@ -94,6 +94,7 @@ public class Robot extends TimedRobot {
         
         server=CameraServer.getInstance();
         server.startAutomaticCapture(0);
+        Robot.driveTrain.resetIMU();
     }
 
     /**

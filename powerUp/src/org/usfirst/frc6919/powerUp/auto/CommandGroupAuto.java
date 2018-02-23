@@ -30,8 +30,8 @@ public class CommandGroupAuto extends CommandGroup {
 					case SWITCH:
 						if (gameData.charAt(0) == 'L'){
 							//when the switch is on the left
-							addSequential(new autoForward156());
-							addSequential(new turnRight90());
+							addSequential(new autoForward144());
+							addParallel(new turnRight90());
 							addSequential(new elevatorUpSwitchAuto());
 							addSequential(new intakeOutAuto());
 						} else {
@@ -42,10 +42,13 @@ public class CommandGroupAuto extends CommandGroup {
 					case SCALE:
 						if (gameData.charAt(1) == 'L'){
 							//when the scale is on the left
-							addSequential(new autoForward324());
+							addSequential(new autoFwdQuarterSpeed24());
+							addSequential(new autoFwdHalfSpeed24());
+							addSequential(new autoFwd3QuarterSpeed24());
+							addParallel(new elevatorUpScaleAuto());
+							addSequential(new autoFwdFullSpeed216());
 							addSequential(new turnRight90());
 							addSequential(new autoReverse12());
-							addSequential(new elevatorUpScaleAuto());
 							addSequential(new intakeOutAuto());
 						} else {
 							//When the scale is on the right
@@ -94,8 +97,8 @@ public class CommandGroupAuto extends CommandGroup {
 							addSequential(new autoForward108());
 						} else {
 							//When the switch is on the right
-							addSequential(new autoForward156());
-							addSequential(new turnLeft90());
+							addSequential(new autoForward144());
+							addParallel(new turnLeft90());
 							addSequential(new elevatorUpSwitchAuto());
 							addSequential(new intakeOutAuto());
 						}
@@ -106,10 +109,13 @@ public class CommandGroupAuto extends CommandGroup {
 							addSequential(new autoForward108());
 						} else {
 							//When the scale is on the right
-							addSequential(new autoForward324());
+							addSequential(new autoFwdQuarterSpeed24());
+							addSequential(new autoFwdHalfSpeed24());
+							addSequential(new autoFwd3QuarterSpeed24());
+							addParallel(new elevatorUpScaleAuto());
+							addSequential(new autoFwdFullSpeed216());
 							addSequential(new turnLeft90());
 							addSequential(new autoReverse12());
-							addSequential(new elevatorUpScaleAuto());
 							addSequential(new intakeOutAuto());
 						}
 						break;

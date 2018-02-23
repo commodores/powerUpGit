@@ -2,15 +2,15 @@
   "dividerPosition": 0.00370919881305638,
   "tabPane": [
     {
-      "title": "Tab 1",
+      "title": "Power Up!",
       "autoPopulate": false,
       "autoPopulatePrefix": "",
       "widgetPane": {
-        "gridSize": 128.0,
+        "gridSize": 64.0,
         "hgap": 16.0,
         "vgap": 16.0,
         "tiles": {
-          "5,0": {
+          "2,0": {
             "size": [
               1,
               1
@@ -21,10 +21,10 @@
               "_title": "SmartDashboard/Goal"
             }
           },
-          "3,0": {
+          "5,0": {
             "size": [
-              1,
-              1
+              2,
+              2
             ],
             "content": {
               "_type": "ComboBox Chooser",
@@ -34,8 +34,8 @@
           },
           "0,0": {
             "size": [
-              3,
-              3
+              1,
+              1
             ],
             "content": {
               "_type": "Camera Stream",
@@ -43,10 +43,10 @@
               "_title": "USB Camera 0"
             }
           },
-          "3,1": {
+          "1,1": {
             "size": [
-              3,
-              2
+              1,
+              1
             ],
             "content": {
               "_type": "Network Table Tree",

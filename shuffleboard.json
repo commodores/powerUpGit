@@ -1,5 +1,5 @@
 {
-  "dividerPosition": 0.15119916579770595,
+  "dividerPosition": 0.00370919881305638,
   "tabPane": [
     {
       "title": "Tab 1",
@@ -10,10 +10,10 @@
         "hgap": 16.0,
         "vgap": 16.0,
         "tiles": {
-          "5,2": {
+          "5,0": {
             "size": [
-              2,
-              2
+              1,
+              1
             ],
             "content": {
               "_type": "ComboBox Chooser",
@@ -21,10 +21,10 @@
               "_title": "SmartDashboard/Goal"
             }
           },
-          "5,0": {
+          "3,0": {
             "size": [
-              2,
-              2
+              1,
+              1
             ],
             "content": {
               "_type": "ComboBox Chooser",
@@ -34,8 +34,8 @@
           },
           "0,0": {
             "size": [
-              5,
-              4
+              3,
+              3
             ],
             "content": {
               "_type": "Camera Stream",
@@ -43,7 +43,7 @@
               "_title": "USB Camera 0"
             }
           },
-          "0,4": {
+          "3,1": {
             "size": [
               3,
               2
@@ -52,20 +52,6 @@
               "_type": "Network Table Tree",
               "_source0": "network_table:///FMSInfo",
               "_title": "FMSInfo"
-            }
-          },
-          "3,4": {
-            "size": [
-              2,
-              2
-            ],
-            "content": {
-              "_type": "Gyro",
-              "_source0": "network_table:///LiveWindow/Ungrouped/ADXRS450_Gyro[0]",
-              "_title": "LiveWindow/Ungrouped/ADXRS450_Gyro[0]",
-              "majorTickSpace": 45.0,
-              "startAngle": 180.0,
-              "tickMarkRingVisible": true
             }
           }
         }

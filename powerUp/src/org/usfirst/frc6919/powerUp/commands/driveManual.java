@@ -54,7 +54,7 @@ public class driveManual extends Command {
     		right = 0;
     	}
     	//Send to subsystem method
-    	Robot.driveTrain.takeJoystickInputs(left, right);
+    	Robot.driveTrain.takeJoystickInputs(-left, -right);
     }
 
     // Make this return true when this Command no longer needs to run execute()

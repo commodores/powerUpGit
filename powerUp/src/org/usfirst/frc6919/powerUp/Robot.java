@@ -84,21 +84,21 @@ public class Robot extends TimedRobot {
 		positionChooser = new SendableChooser<>();
 		positionChooser.addDefault(Position.LEFT.toString(), Position.LEFT); // set default
 		for(int i = 1; i < Position.values().length; i++) { 
-			positionChooser.addObject(Position.values()[i].toString(), Position.values()[i]); } // add each autonomous enum value to chooser
+			positionChooser.addObject(Position.values()[i].toString(), Position.values()[i]); } // add each autonomous enumeration value to chooser
 		SmartDashboard.putData("Position", positionChooser); //display the chooser on the dash
 		
 		/// instantiate goal chooser
 		goalChooser = new SendableChooser<>();
 		goalChooser.addDefault("Just Cross Line", Goal.CROSS_LINE); // set default
 		for(int i = 1; i < Goal.values().length; i++) { 
-			goalChooser.addObject(Goal.values()[i].toString(), Goal.values()[i]); } // add each autonomous enum value to chooser
+			goalChooser.addObject(Goal.values()[i].toString(), Goal.values()[i]); } // add each autonomous enumeration value to chooser
 		SmartDashboard.putData("Goal", goalChooser); //display the chooser on the dash
 		
 		/// Do we cross?
 		crossChooser = new SendableChooser<>();
 		crossChooser.addDefault("Don't Cross!!", Crosser.DO_NOT_CROSS); // set default
 		for(int i = 1; i < Crosser.values().length; i++) { 
-			crossChooser.addObject(Crosser.values()[i].toString(), Crosser.values()[i]); } // add each autonomous enum value to chooser
+			crossChooser.addObject(Crosser.values()[i].toString(), Crosser.values()[i]); } // add each autonomous enumeration value to chooser
 		SmartDashboard.putData("Cross?", crossChooser); //display the chooser on the dash
         
         server=CameraServer.getInstance();

@@ -61,11 +61,11 @@ public class elevator extends Subsystem {
     }
 
     public void elevatorUp() {
-    		elevatorMotor.set(-.75);
+    		elevatorMotor.set(-1);
     }
     
     public void elevatorDown() {
-    		elevatorMotor.set(.5);
+    		elevatorMotor.set(.75);
     }
     
     public void elevatorStop() {

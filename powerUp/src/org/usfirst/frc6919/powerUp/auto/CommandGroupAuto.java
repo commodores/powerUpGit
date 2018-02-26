@@ -28,16 +28,38 @@ public class CommandGroupAuto extends CommandGroup {
 						addSequential(new autoForward108());
 						break;
 					case SWITCH:
-						if (gameData.charAt(0) == 'L'){
-							//when the switch is on the left
-							addSequential(new autoForward144());
-							addParallel(new turnRight90());
-							addSequential(new elevatorUpSwitchAuto());
-							addSequential(new intakeOutAuto());
-						} else {
-							//When the switch is on the right
-							addSequential(new autoForward108());
-						}
+						switch (crosser) {
+							case DO_NOT_CROSS:
+								if (gameData.charAt(0) == 'L'){
+										//when the switch is on the left
+										addSequential(new autoForward144());
+										addParallel(new turnRight90());
+										addSequential(new elevatorUpSwitchAuto());
+										addSequential(new intakeOutAuto());
+									} else {
+										//When the switch is on the right
+										addSequential(new autoForward108());
+									}
+								break;
+							case CROSS:
+								if (gameData.charAt(0) == 'L'){
+									//when the switch is on the left
+									addSequential(new autoForward144());
+									addParallel(new turnRight90());
+									addSequential(new elevatorUpSwitchAuto());
+									addSequential(new intakeOutAuto());
+								} else {
+									//When the switch is on the right
+									addSequential(new autoForward48());
+									addSequential(new turnRight90());
+									addSequential(new autoFwdFullSpeed216());
+									addParallel(new turnLeft90());
+									addSequential(new elevatorUpSwitchAuto());
+									addSequential(new autoFwdHalfSpeed24());
+									addSequential(new intakeOutAuto());
+								}
+							break;
+						}	
 						break;
 					case SCALE:
 						if (gameData.charAt(1) == 'L'){
@@ -87,28 +109,47 @@ public class CommandGroupAuto extends CommandGroup {
 				break;
 				
 			case RIGHT:
-				switch (goal) {
+				switch (goal){
 					case CROSS_LINE:
 						addSequential(new autoForward108());
 						break;
 					case SWITCH:
-						if (gameData.charAt(0) == 'L'){
-							//when the switch is on the left
-							addSequential(new autoForward108());
-						} else {
-							//When the switch is on the right
-							addSequential(new autoForward144());
-							addParallel(new turnLeft90());
-							addSequential(new elevatorUpSwitchAuto());
-							addSequential(new intakeOutAuto());
-						}
+						switch (crosser) {
+							case DO_NOT_CROSS:
+								if (gameData.charAt(0) == 'R'){
+										//when the switch is on the right
+										addSequential(new autoForward144());
+										addParallel(new turnLeft90());
+										addSequential(new elevatorUpSwitchAuto());
+										addSequential(new intakeOutAuto());
+									} else {
+										//When the switch is on the right
+										addSequential(new autoForward108());
+									}
+								break;
+							case CROSS:
+								if (gameData.charAt(0) == 'R'){
+									//when the switch is on the left
+									addSequential(new autoForward144());
+									addParallel(new turnLeft90());
+									addSequential(new elevatorUpSwitchAuto());
+									addSequential(new intakeOutAuto());
+								} else {
+									//When the switch is on the right
+									addSequential(new autoForward48());
+									addSequential(new turnLeft90());
+									addSequential(new autoFwdFullSpeed216());
+									addParallel(new turnRight90());
+									addSequential(new elevatorUpSwitchAuto());
+									addSequential(new autoFwdHalfSpeed24());
+									addSequential(new intakeOutAuto());
+								}
+							break;
+						}	
 						break;
 					case SCALE:
 						if (gameData.charAt(1) == 'L'){
 							//when the scale is on the left
-							addSequential(new autoForward108());
-						} else {
-							//When the scale is on the right
 							addSequential(new autoFwdQuarterSpeed24());
 							addSequential(new autoFwdHalfSpeed24());
 							addSequential(new autoFwd3QuarterSpeed24());
@@ -117,10 +158,13 @@ public class CommandGroupAuto extends CommandGroup {
 							addSequential(new turnLeft90());
 							addSequential(new autoReverse12());
 							addSequential(new intakeOutAuto());
+						} else {
+							//When the scale is on the right
+							addSequential(new autoForward108());
 						}
 						break;
 				}
-			break;
+				break;
 		}	
 	}
 }

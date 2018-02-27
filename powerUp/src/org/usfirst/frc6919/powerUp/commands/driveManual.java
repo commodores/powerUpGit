@@ -60,7 +60,7 @@ public class driveManual extends Command {
     	//Not Cubed
     	double left = Robot.oi.gamePad.getRawAxis(1) * .75;
     	double right = Robot.oi.gamePad.getRawAxis(5) * .75;
-    	Robot.driveTrain.drive(left, right);
+    	Robot.driveTrain.drive(-left, -right);
     	
     }
 

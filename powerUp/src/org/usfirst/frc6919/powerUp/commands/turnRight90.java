@@ -45,7 +45,7 @@ public class turnRight90 extends Command {
     // Called repeatedly when this Command is scheduled to run
     @Override
     protected void execute() {
-    	Robot.driveTrain.drive(.5, -.5);
+    	Robot.driveTrain.drive(.55, -.55);
     }
 
     // Make this return true when this Command no longer needs to run execute()

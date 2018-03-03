@@ -58,8 +58,8 @@ public class driveManual extends Command {
     	//Robot.driveTrain.takeJoystickInputs(-left, -right);
     	
     	//Not Cubed
-    	double left = Robot.oi.gamePad.getRawAxis(1) * .8;
-    	double right = Robot.oi.gamePad.getRawAxis(5) * .8;
+    	double left = Robot.oi.gamePad.getRawAxis(1) * .75;
+    	double right = Robot.oi.gamePad.getRawAxis(5) * .75;
     	Robot.driveTrain.drive(-left, -right);
     	
     }

@@ -48,7 +48,7 @@ public class autoFwdCrossSwitch extends Command {
     @Override
     protected void execute() {
     	double pTerm = Robot.driveTrain.driveTrainGain * (0.0 - Robot.driveTrain.getIMUAngle());
-    	Robot.driveTrain.drive(.75 + pTerm, .75 - pTerm);
+    	Robot.driveTrain.drive(.625 + pTerm, .625 - pTerm);
     }
 
     // Make this return true when this Command no longer needs to run execute()

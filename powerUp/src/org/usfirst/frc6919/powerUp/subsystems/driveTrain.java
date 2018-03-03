@@ -50,7 +50,7 @@ public class driveTrain extends Subsystem {
     private final ADIS16448_IMU imu = RobotMap.driveTrainimu;
     //private final ADXRS450_Gyro gyro = RobotMap.driveTrainGyro;
     
-    public final double driveTrainGain = .05;
+    public final double driveTrainGain = .02;
     
     public final float cubicConstant = (float) 0.07;
 

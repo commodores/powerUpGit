@@ -43,7 +43,7 @@ public class elevatorManual extends Command {
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
-		Robot.elevator.elevatorManual(-Robot.oi.joystick.getRawAxis(1) * .5);
+		Robot.elevator.elevatorManual(Robot.oi.joystick.getRawAxis(1) * .5);
 	}
 
 	// Make this return true when this Command no longer needs to run execute()

@@ -48,13 +48,13 @@ public class autoFwdCrossFieldScale extends Command {
     @Override
     protected void execute() {
     	double pTerm = Robot.driveTrain.driveTrainGain * (0.0 - Robot.driveTrain.getIMUAngle());
-    	Robot.driveTrain.drive(.75 + pTerm, .75 - pTerm);
+    	Robot.driveTrain.drive(.625 + pTerm, .625 - pTerm);
     }
 
     // Make this return true when this Command no longer needs to run execute()
     @Override
     protected boolean isFinished() {
-        return Robot.driveTrain.getEncoderDistance() > 228 || isTimedOut();
+        return Robot.driveTrain.getEncoderDistance() > 178 || isTimedOut();
     }
 
     // Called once after isFinished returns true

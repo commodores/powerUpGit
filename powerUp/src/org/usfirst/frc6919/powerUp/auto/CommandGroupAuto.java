@@ -35,6 +35,7 @@ public class CommandGroupAuto extends CommandGroup {
 						addSequential(new autoFwdSwitch());
 						addParallel(new turnRight90());
 						addSequential(new elevatorUpSwitchAuto());
+						addSequential(new autoForward12());
 						addSequential(new intakeOutAuto());
 					} else {
 						// When the switch is on the right
@@ -47,6 +48,7 @@ public class CommandGroupAuto extends CommandGroup {
 						addSequential(new autoFwdSwitch());
 						addParallel(new turnRight90());
 						addSequential(new elevatorUpSwitchAuto());
+						addSequential(new autoForward12());
 						addSequential(new intakeOutAuto());
 					} else {
 						// When the switch is on the right
@@ -55,7 +57,7 @@ public class CommandGroupAuto extends CommandGroup {
 						addSequential(new autoFwdCrossFieldSwitch());
 						addParallel(new turnLeft90());
 						addSequential(new elevatorUpSwitchAuto());
-						addSequential(new autoForward12());
+						addSequential(new autoFwdScoreSwitchCross());
 						addSequential(new intakeOutAuto());
 					}
 					break;
@@ -89,7 +91,7 @@ public class CommandGroupAuto extends CommandGroup {
 						addParallel(new elevatorUpScaleAuto());
 						addSequential(new autoFwdCrossFieldScale());
 						addSequential(new turnLeft90());
-						addSequential(new autoForward12());
+						addSequential(new autoForward24());
 						addSequential(new intakeOutAuto());
 					}
 					break;
@@ -139,6 +141,7 @@ public class CommandGroupAuto extends CommandGroup {
 						addSequential(new autoFwdSwitch());
 						addParallel(new turnLeft90());
 						addSequential(new elevatorUpSwitchAuto());
+						addSequential(new autoForward12());
 						addSequential(new intakeOutAuto());
 					} else {
 						// When the switch is on the left
@@ -151,6 +154,7 @@ public class CommandGroupAuto extends CommandGroup {
 						addSequential(new autoFwdSwitch());
 						addParallel(new turnLeft90());
 						addSequential(new elevatorUpSwitchAuto());
+						addSequential(new autoForward12());
 						addSequential(new intakeOutAuto());
 					} else {
 						// When the switch is on the left
@@ -159,7 +163,7 @@ public class CommandGroupAuto extends CommandGroup {
 						addSequential(new autoFwdCrossFieldSwitch());
 						addParallel(new turnRight90());
 						addSequential(new elevatorUpSwitchAuto());
-						addSequential(new autoForward12());
+						addSequential(new autoFwdScoreSwitchCross());
 						addSequential(new intakeOutAuto());
 					}
 					break;
@@ -193,7 +197,7 @@ public class CommandGroupAuto extends CommandGroup {
 						addParallel(new elevatorUpScaleAuto());
 						addSequential(new autoFwdCrossFieldScale());
 						addSequential(new turnRight90());
-						addSequential(new autoForward12());
+						addSequential(new autoForward24());
 						addSequential(new intakeOutAuto());
 					}
 					break;

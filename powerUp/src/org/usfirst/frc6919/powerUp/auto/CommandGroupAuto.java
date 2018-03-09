@@ -30,15 +30,21 @@ public class CommandGroupAuto extends CommandGroup {
 				addSequential(new autoFwdLeftScale());
 				addSequential(new autoFwdRight45());
 				addSequential(new intakeOutAuto());
-			} else {
-				addSequential(new autoFwdCrossLine());
+			} else { //DANCE!!
+				addSequential(new autoFwdCrossDanceLine());
+				addSequential(new autoChill());
 				addSequential(new autoBackUpSome());
+				addSequential(new autoChill());
 				addSequential(new turnLeft90());
+				addSequential(new autoChill());
 				addSequential(new turnRight90());
 				addSequential(new turnRight90());
+				addSequential(new autoChill());
+				addParallel(new elevatorUpSwitchAuto());
 				addSequential(new turnLeft90());
 				addSequential(new turnLeft90());
 				addSequential(new turnLeft90());
+				addSequential(new autoChill());
 				addSequential(new autoBackUpSome());
 			}
 			break;
@@ -52,15 +58,21 @@ public class CommandGroupAuto extends CommandGroup {
 				addSequential(new autoFwdRightScale());
 				addSequential(new autoFwdLeft45());
 				addSequential(new intakeOutAuto());
-			} else {
-				addSequential(new autoFwdCrossLine());
+			} else { //DANCE!!
+				addSequential(new autoFwdCrossDanceLine());
+				addSequential(new autoChill());
 				addSequential(new autoBackUpSome());
+				addSequential(new autoChill());
 				addSequential(new turnLeft90());
+				addSequential(new autoChill());
 				addSequential(new turnRight90());
 				addSequential(new turnRight90());
+				addSequential(new autoChill());
+				addParallel(new elevatorUpSwitchAuto());
 				addSequential(new turnLeft90());
 				addSequential(new turnLeft90());
 				addSequential(new turnLeft90());
+				addSequential(new autoChill());
 				addSequential(new autoBackUpSome());
 			}			
 			break;
@@ -69,27 +81,39 @@ public class CommandGroupAuto extends CommandGroup {
 				addParallel(new elevatorUpSwitchAuto());
 				addSequential(new autoFwdCrossLine());
 				addSequential(new intakeOutAuto());
-			} else {
-				addSequential(new autoFwdCrossLine());
+			} else { //DANCE!!
+				addSequential(new autoFwdCrossDanceLine());
+				addSequential(new autoChill());
 				addSequential(new autoBackUpSome());
+				addSequential(new autoChill());
 				addSequential(new turnLeft90());
+				addSequential(new autoChill());
 				addSequential(new turnRight90());
 				addSequential(new turnRight90());
+				addSequential(new autoChill());
+				addParallel(new elevatorUpSwitchAuto());
 				addSequential(new turnLeft90());
 				addSequential(new turnLeft90());
 				addSequential(new turnLeft90());
+				addSequential(new autoChill());
 				addSequential(new autoBackUpSome());
 			}
 			break;
 		case DANCE_PARTY:
-			addSequential(new autoFwdCrossLine());
+			addSequential(new autoFwdCrossDanceLine());
+			addSequential(new autoChill());
 			addSequential(new autoBackUpSome());
+			addSequential(new autoChill());
 			addSequential(new turnLeft90());
+			addSequential(new autoChill());
 			addSequential(new turnRight90());
 			addSequential(new turnRight90());
+			addSequential(new autoChill());
+			addParallel(new elevatorUpSwitchAuto());
 			addSequential(new turnLeft90());
 			addSequential(new turnLeft90());
 			addSequential(new turnLeft90());
+			addSequential(new autoChill());
 			addSequential(new autoBackUpSome());
 		}
 	}

@@ -3,9 +3,7 @@ package org.usfirst.frc6919.powerUp.auto;
 import edu.wpi.first.wpilibj.DriverStation;
 import org.usfirst.frc6919.powerUp.Robot;
 import org.usfirst.frc6919.powerUp.commands.*; // when the commands are ready, load each individually to decrease runtime
-import org.usfirst.frc6919.powerUp.enumeration.Goal;
 import org.usfirst.frc6919.powerUp.enumeration.Position;
-import org.usfirst.frc6919.powerUp.enumeration.Crosser;
 
 import edu.wpi.first.wpilibj.command.CommandGroup;
 

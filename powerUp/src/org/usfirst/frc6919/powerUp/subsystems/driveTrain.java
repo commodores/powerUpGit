@@ -72,20 +72,6 @@ public class driveTrain extends Subsystem {
 
     }
     
-    public void takeJoystickInputs(float left, float right) {
-    	
-    	float cubedLeft = cubicScale(left);
-    	float cubedRight = cubicScale(right);
-    	
-    	differentialDrive.tankDrive(cubedLeft, cubedRight);
-    }
-    
-    private float cubicScale(float arg){
-    	float a;
-    	a = (float) (cubicConstant*arg + (1-cubicConstant)*Math.pow((double)arg, 3));
-    	return a;
-    }
-    
     public void drive(double left, double right) {
     	differentialDrive.tankDrive(left, right);
     }

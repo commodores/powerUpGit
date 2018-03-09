@@ -32,6 +32,14 @@ public class CommandGroupAuto extends CommandGroup {
 				addSequential(new intakeOutAuto());
 			} else {
 				addSequential(new autoFwdCrossLine());
+				addSequential(new autoBackUpSome());
+				addSequential(new turnLeft90());
+				addSequential(new turnRight90());
+				addSequential(new turnRight90());
+				addSequential(new turnLeft90());
+				addSequential(new turnLeft90());
+				addSequential(new turnLeft90());
+				addSequential(new autoBackUpSome());
 			}
 			break;
 		case RIGHT:
@@ -46,6 +54,14 @@ public class CommandGroupAuto extends CommandGroup {
 				addSequential(new intakeOutAuto());
 			} else {
 				addSequential(new autoFwdCrossLine());
+				addSequential(new autoBackUpSome());
+				addSequential(new turnLeft90());
+				addSequential(new turnRight90());
+				addSequential(new turnRight90());
+				addSequential(new turnLeft90());
+				addSequential(new turnLeft90());
+				addSequential(new turnLeft90());
+				addSequential(new autoBackUpSome());
 			}			
 			break;
 		case CENTER:
@@ -55,6 +71,14 @@ public class CommandGroupAuto extends CommandGroup {
 				addSequential(new intakeOutAuto());
 			} else {
 				addSequential(new autoFwdCrossLine());
+				addSequential(new autoBackUpSome());
+				addSequential(new turnLeft90());
+				addSequential(new turnRight90());
+				addSequential(new turnRight90());
+				addSequential(new turnLeft90());
+				addSequential(new turnLeft90());
+				addSequential(new turnLeft90());
+				addSequential(new autoBackUpSome());
 			}
 			break;
 		case DANCE_PARTY:

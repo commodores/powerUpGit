@@ -57,6 +57,16 @@ public class CommandGroupAuto extends CommandGroup {
 				addSequential(new autoFwdCrossLine());
 			}
 			break;
+		case DANCE_PARTY:
+			addSequential(new autoFwdCrossLine());
+			addSequential(new autoBackUpSome());
+			addSequential(new turnLeft90());
+			addSequential(new turnRight90());
+			addSequential(new turnRight90());
+			addSequential(new turnLeft90());
+			addSequential(new turnLeft90());
+			addSequential(new turnLeft90());
+			addSequential(new autoBackUpSome());
 		}
 	}
 }

@@ -102,7 +102,7 @@ public class Robot extends TimedRobot {
 
     @Override
     public void autonomousInit() {
-    	DriverStation.reportWarning("AUTONOMOUS!!!!!!!!!", false);
+    	DriverStation.reportWarning("AUTON-ON-OMOUS!!!!!!!!!", false);
         
     	if(positionChooser.getSelected() != null) {
 			auto = new CommandGroupAuto(positionChooser.getSelected());

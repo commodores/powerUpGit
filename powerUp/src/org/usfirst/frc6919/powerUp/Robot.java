@@ -82,8 +82,7 @@ public class Robot extends TimedRobot {
 			positionChooser.addObject(Position.values()[i].toString(), Position.values()[i]); } // add each autonomous enumeration value to chooser
 		SmartDashboard.putData("Position", positionChooser); //display the chooser
         
-        server=CameraServer.getInstance();
-        server.startAutomaticCapture(0);
+        CameraServer.getInstance().startAutomaticCapture();
         Robot.driveTrain.resetIMU();
     }
 

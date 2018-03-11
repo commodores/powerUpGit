@@ -1,5 +1,5 @@
 {
-  "dividerPosition": 0.003961965134706815,
+  "dividerPosition": 0.00370919881305638,
   "tabPane": [
     {
       "title": "Power Up!",
@@ -7,54 +7,10 @@
       "autoPopulatePrefix": "",
       "widgetPane": {
         "gridSize": 64.0,
+        "showGrid": true,
         "hgap": 16.0,
         "vgap": 16.0,
-        "tiles": {
-          "2,3": {
-            "size": [
-              3,
-              2
-            ],
-            "content": {
-              "_type": "ComboBox Chooser",
-              "_source0": "network_table:///SmartDashboard/Goal",
-              "_title": "SmartDashboard/Goal"
-            }
-          },
-          "5,0": {
-            "size": [
-              2,
-              2
-            ],
-            "content": {
-              "_type": "ComboBox Chooser",
-              "_source0": "network_table:///SmartDashboard/Position",
-              "_title": "SmartDashboard/Position"
-            }
-          },
-          "0,0": {
-            "size": [
-              1,
-              1
-            ],
-            "content": {
-              "_type": "Camera Stream",
-              "_source0": "camera_server://USB Camera 0",
-              "_title": "USB Camera 0"
-            }
-          },
-          "1,1": {
-            "size": [
-              1,
-              1
-            ],
-            "content": {
-              "_type": "Network Table Tree",
-              "_source0": "network_table:///FMSInfo",
-              "_title": "FMSInfo"
-            }
-          }
-        }
+        "tiles": {}
       }
     }
   ]

@@ -61,7 +61,7 @@ public class driveManual extends Command {
     	double left;
     	double right;
     	
-    	if (Robot.oi.joystick.getRawButton(3)) {
+    	if (Robot.oi.joystick.getRawButton(6)) {
     		left = Robot.oi.gamePad.getRawAxis(1);
         	right = Robot.oi.gamePad.getRawAxis(5);
     	} else {

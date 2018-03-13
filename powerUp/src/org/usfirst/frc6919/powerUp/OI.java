@@ -67,9 +67,9 @@ public class OI {
 
         joystick = new Joystick(1);
         
-        intakeOutBtn = new JoystickButton(joystick, 2);
+        intakeOutBtn = new JoystickButton(joystick, 10);
         intakeOutBtn.whileHeld(new intakeOut());
-        intakeInBtn = new JoystickButton(joystick, 1);
+        intakeInBtn = new JoystickButton(joystick, 7);
         intakeInBtn.whileHeld(new intakeIn());
         gamePad = new Joystick(0);
         

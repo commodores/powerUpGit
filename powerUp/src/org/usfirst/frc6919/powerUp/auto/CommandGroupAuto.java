@@ -29,6 +29,7 @@ public class CommandGroupAuto extends CommandGroup {
 				addParallel(new elevatorUpScaleAuto());
 				addSequential(new autoFwdLeftScale());
 				addSequential(new autoFwdRight45());
+				addSequential(new autoChill());
 				addSequential(new intakeOutAuto());
 			} else { //DANCE!!
 				addSequential(new autoFwdCrossDanceLine());
@@ -57,6 +58,7 @@ public class CommandGroupAuto extends CommandGroup {
 				addParallel(new elevatorUpScaleAuto());
 				addSequential(new autoFwdRightScale());
 				addSequential(new autoFwdLeft45());
+				addSequential(new autoChill());
 				addSequential(new intakeOutAuto());
 			} else { //DANCE!!
 				addSequential(new autoFwdCrossDanceLine());
@@ -81,22 +83,13 @@ public class CommandGroupAuto extends CommandGroup {
 				addParallel(new elevatorUpSwitchAuto());
 				addSequential(new autoFwdCrossLine());
 				addSequential(new intakeOutAuto());
-			} else { //DANCE!!
-				addSequential(new autoFwdCrossDanceLine());
-				addSequential(new autoChill());
-				addSequential(new autoBackUpSome());
-				addSequential(new autoChill());
-				addSequential(new turnLeft90());
-				addSequential(new autoChill());
-				addSequential(new turnRight90());
-				addSequential(new turnRight90());
-				addSequential(new autoChill());
+			} else {
 				addParallel(new elevatorUpSwitchAuto());
-				addSequential(new turnLeft90());
-				addSequential(new turnLeft90());
-				addSequential(new turnLeft90());
-				addSequential(new autoChill());
-				addSequential(new autoBackUpSome());
+				addSequential(new autoLeftCurve());
+				addSequential(new autoCenterCross());
+				addSequential(new autoRightScore());
+				addSequential(new autoLeftScoreFwd());
+				addSequential(new intakeOutAuto());
 			}
 			break;
 		case DANCE_PARTY:

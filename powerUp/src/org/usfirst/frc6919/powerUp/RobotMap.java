@@ -18,6 +18,7 @@ import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.PIDSourceType;
 import edu.wpi.first.wpilibj.PowerDistributionPanel;
+import edu.wpi.first.wpilibj.Servo;
 import edu.wpi.first.wpilibj.Spark;
 import edu.wpi.first.wpilibj.SpeedController;
 import edu.wpi.first.wpilibj.SpeedControllerGroup;
@@ -43,6 +44,9 @@ public class RobotMap {
     public static SpeedControllerGroup driveTrainrightMotors;
     public static DifferentialDrive driveTraindifferentialDrive;
     public static Encoder driveTrainleftEncoder;
+    public static Servo intakeupAndDown;
+    public static Servo intakeupAndClosing2;
+    public static Servo intakeopeningAndClosing;
     public static SpeedController intakeleftIntakeMotor;
     public static SpeedController intakerightIntakeMotor;
     public static SpeedControllerGroup intakeintakeMotors;
@@ -86,6 +90,15 @@ public class RobotMap {
         LiveWindow.addSensor("driveTrain", "leftEncoder", driveTrainleftEncoder);
         driveTrainleftEncoder.setDistancePerPulse(0.053333);
         driveTrainleftEncoder.setPIDSourceType(PIDSourceType.kRate);
+        intakeupAndDown = new Servo(4);
+        LiveWindow.addActuator("intake", "upAndDown", intakeupAndDown);
+        
+        intakeupAndClosing2 = new Servo(5);
+        LiveWindow.addActuator("intake", "upAndClosing2", intakeupAndClosing2);
+        
+        intakeopeningAndClosing = new Servo(3);
+        LiveWindow.addActuator("intake", "openingAnd Closing", intakeopeningAndClosing);
+        
         intakeleftIntakeMotor = new Spark(2);
         LiveWindow.addActuator("intake", "leftIntakeMotor", (Spark) intakeleftIntakeMotor);
         intakeleftIntakeMotor.setInverted(false);

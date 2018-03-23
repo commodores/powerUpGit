@@ -44,9 +44,9 @@ public class RobotMap {
     public static SpeedControllerGroup driveTrainrightMotors;
     public static DifferentialDrive driveTraindifferentialDrive;
     public static Encoder driveTrainleftEncoder;
-    public static Servo intakeupAndDown;
-    public static Servo intakeupAndClosing2;
-    public static Servo intakeopeningAndClosing;
+    public static Servo intakerightRaiseServo;
+    public static Servo intakeleftRaiseServo;
+    public static Servo intakeclampServo;
     public static SpeedController intakeleftIntakeMotor;
     public static SpeedController intakerightIntakeMotor;
     public static SpeedControllerGroup intakeintakeMotors;
@@ -90,14 +90,14 @@ public class RobotMap {
         LiveWindow.addSensor("driveTrain", "leftEncoder", driveTrainleftEncoder);
         driveTrainleftEncoder.setDistancePerPulse(0.053333);
         driveTrainleftEncoder.setPIDSourceType(PIDSourceType.kRate);
-        intakeupAndDown = new Servo(4);
-        LiveWindow.addActuator("intake", "upAndDown", intakeupAndDown);
+        intakerightRaiseServo = new Servo(4);
+        LiveWindow.addActuator("intake", "rightRaiseServo", intakerightRaiseServo);
         
-        intakeupAndClosing2 = new Servo(5);
-        LiveWindow.addActuator("intake", "upAndClosing2", intakeupAndClosing2);
+        intakeleftRaiseServo = new Servo(5);
+        LiveWindow.addActuator("intake", "leftRaiseServo", intakeleftRaiseServo);
         
-        intakeopeningAndClosing = new Servo(3);
-        LiveWindow.addActuator("intake", "openingAnd Closing", intakeopeningAndClosing);
+        intakeclampServo = new Servo(3);
+        LiveWindow.addActuator("intake", "clampServo", intakeclampServo);
         
         intakeleftIntakeMotor = new Spark(2);
         LiveWindow.addActuator("intake", "leftIntakeMotor", (Spark) intakeleftIntakeMotor);

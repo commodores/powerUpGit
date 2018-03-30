@@ -39,6 +39,7 @@ public class intakeOpen extends Command {
     @Override
     protected void initialize() {
     	Robot.intake.intakeOpen();
+    	Robot.ledController.setRed();
     }
 
     // Called repeatedly when this Command is scheduled to run

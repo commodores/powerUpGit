@@ -42,6 +42,7 @@ public class autoFwdCrossLine extends Command {
     	//Reset Sensors
     	Robot.driveTrain.resetEncoder();
     	Robot.driveTrain.resetIMU();
+    	Robot.ledController.set4C();
     }
 
     // Called repeatedly when this Command is scheduled to run

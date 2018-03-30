@@ -31,22 +31,8 @@ public class CommandGroupAuto extends CommandGroup {
 				addSequential(new autoFwdRight45());
 				addSequential(new autoChill());
 				addSequential(new intakeOutAuto());
-			} else { //DANCE!!
-				addSequential(new autoFwdCrossDanceLine());
-				addSequential(new autoChill());
-				addSequential(new autoBackUpSome());
-				addSequential(new autoChill());
-				addSequential(new turnLeft90());
-				addSequential(new autoChill());
-				addSequential(new turnRight90());
-				addSequential(new turnRight90());
-				addSequential(new autoChill());
-				addParallel(new elevatorUpSwitchAuto());
-				addSequential(new turnLeft90());
-				addSequential(new turnLeft90());
-				addSequential(new turnLeft90());
-				addSequential(new autoChill());
-				addSequential(new autoBackUpSome());
+			} else { //Cross the line
+				addSequential(new autoFwdCrossLine());
 			}
 			break;
 		case RIGHT:
@@ -60,22 +46,8 @@ public class CommandGroupAuto extends CommandGroup {
 				addSequential(new autoFwdLeft45());
 				addSequential(new autoChill());
 				addSequential(new intakeOutAuto());
-			} else { //DANCE!!
-				addSequential(new autoFwdCrossDanceLine());
-				addSequential(new autoChill());
-				addSequential(new autoBackUpSome());
-				addSequential(new autoChill());
-				addSequential(new turnLeft90());
-				addSequential(new autoChill());
-				addSequential(new turnRight90());
-				addSequential(new turnRight90());
-				addSequential(new autoChill());
-				addParallel(new elevatorUpSwitchAuto());
-				addSequential(new turnLeft90());
-				addSequential(new turnLeft90());
-				addSequential(new turnLeft90());
-				addSequential(new autoChill());
-				addSequential(new autoBackUpSome());
+			} else { //Cross the line
+				addSequential(new autoFwdCrossLine());
 			}			
 			break;
 		case CENTER:

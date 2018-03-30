@@ -42,6 +42,7 @@ public class autoFwdCrossDanceLine extends Command {
     	//Reset Sensors
     	Robot.driveTrain.resetEncoder();
     	Robot.driveTrain.resetIMU();
+    	Robot.ledController.setRainbow();
     }
 
     // Called repeatedly when this Command is scheduled to run

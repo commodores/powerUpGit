@@ -21,30 +21,30 @@ public class CommandGroupAuto extends CommandGroup {
 
 		switch (position) {
 		case LEFT:
-			if (gameData.charAt(0) == 'L') {
-				addParallel(new elevatorUpSwitchAuto());
-				addSequential(new autoFwdLeftSwitch());
-				addSequential(new intakeOutAuto());
-			} else if (gameData.charAt(1) == 'L') {
+			if (gameData.charAt(1) == 'L') {
 				addParallel(new elevatorUpScaleAuto());
 				addSequential(new autoFwdLeftScale());
 				addSequential(new autoFwdRight45());
 				addSequential(new autoChill());
+				addSequential(new intakeOutAuto());
+			} else if (gameData.charAt(0) == 'L') {
+				addParallel(new elevatorUpSwitchAuto());
+				addSequential(new autoFwdLeftSwitch());
 				addSequential(new intakeOutAuto());
 			} else { //Cross the line
 				addSequential(new autoFwdCrossLine());
 			}
 			break;
 		case RIGHT:
-			if (gameData.charAt(0) == 'R') {
-				addParallel(new elevatorUpSwitchAuto());
-				addSequential(new autoFwdRightSwitch());
-				addSequential(new intakeOutAuto());
-			} else if (gameData.charAt(1) == 'R') {
+			if (gameData.charAt(1) == 'R') {
 				addParallel(new elevatorUpScaleAuto());
 				addSequential(new autoFwdRightScale());
 				addSequential(new autoFwdLeft45());
 				addSequential(new autoChill());
+				addSequential(new intakeOutAuto());
+			} else if (gameData.charAt(0) == 'R') {
+				addParallel(new elevatorUpSwitchAuto());
+				addSequential(new autoFwdRightSwitch());
 				addSequential(new intakeOutAuto());
 			} else { //Cross the line
 				addSequential(new autoFwdCrossLine());

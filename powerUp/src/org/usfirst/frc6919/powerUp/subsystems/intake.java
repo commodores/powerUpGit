@@ -71,11 +71,11 @@ public class intake extends Subsystem {
     }
         
     public void intakeOpen() {
-    	clampServo.set(1.0);
+    	clampServo.set(.5);
     }
     
     public void intakeClose() {
-    	clampServo.set(-1.0);
+    	clampServo.set(-.5);
     }
     
 }

@@ -32,6 +32,8 @@ public class CommandGroupAuto extends CommandGroup {
 				addSequential(new autoFwdLeftSwitch());
 				addSequential(new intakeOutAuto());
 			} else { //Cross the line
+				addSequential(new autoFwdRightScale());
+				addSequential(new turnRight90());
 				addSequential(new autoFwdCrossLine());
 			}
 			break;
@@ -47,6 +49,8 @@ public class CommandGroupAuto extends CommandGroup {
 				addSequential(new autoFwdRightSwitch());
 				addSequential(new intakeOutAuto());
 			} else { //Cross the line
+				addSequential(new autoFwdLeftScale());
+				addSequential(new turnLeft90());
 				addSequential(new autoFwdCrossLine());
 			}			
 			break;

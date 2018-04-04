@@ -45,12 +45,12 @@ public class RobotMap {
     public static SpeedController intakeleftIntakeMotor;
     public static SpeedController intakerightIntakeMotor;
     public static SpeedControllerGroup intakeintakeMotors;
-    public static SpeedController intakeclampServo;
     public static DigitalInput elevatorelevatorUpLimit;
     public static DigitalInput elevatorelevatorDownLimit;
     public static SpeedController elevatorelevatorMotor;
     public static SpeedController elevatorservo1;
     public static SpeedController elevatorservo2;
+    public static SpeedController elevatorservo3;
     public static SpeedControllerGroup elevatorraiseServos;
     public static SpeedController ledControllerrevBlinkin;
 
@@ -91,16 +91,13 @@ public class RobotMap {
         driveTrainleftEncoder.setPIDSourceType(PIDSourceType.kRate);
         intakeleftIntakeMotor = new Spark(2);
         LiveWindow.addActuator("intake", "leftIntakeMotor", (Spark) intakeleftIntakeMotor);
-        intakeleftIntakeMotor.setInverted(false);
+        intakeleftIntakeMotor.setInverted(true);
         intakerightIntakeMotor = new Spark(1);
         LiveWindow.addActuator("intake", "rightIntakeMotor", (Spark) intakerightIntakeMotor);
         intakerightIntakeMotor.setInverted(false);
         intakeintakeMotors = new SpeedControllerGroup(intakeleftIntakeMotor, intakerightIntakeMotor  );
         LiveWindow.addActuator("intake", "intakeMotors", intakeintakeMotors);
         
-        intakeclampServo = new Spark(3);
-        LiveWindow.addActuator("intake", "clampServo", (Spark) intakeclampServo);
-        intakeclampServo.setInverted(false);
         elevatorelevatorUpLimit = new DigitalInput(3);
         LiveWindow.addSensor("elevator", "elevatorUpLimit", elevatorelevatorUpLimit);
         
@@ -116,6 +113,9 @@ public class RobotMap {
         elevatorservo2 = new Spark(5);
         LiveWindow.addActuator("elevator", "servo2", (Spark) elevatorservo2);
         elevatorservo2.setInverted(false);
+        elevatorservo3 = new Spark(3);
+        LiveWindow.addActuator("elevator", "servo3", (Spark) elevatorservo3);
+        elevatorservo3.setInverted(false);
         elevatorraiseServos = new SpeedControllerGroup(elevatorservo1, elevatorservo2  );
         LiveWindow.addActuator("elevator", "raiseServos", elevatorraiseServos);
         

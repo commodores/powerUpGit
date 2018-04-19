@@ -32,7 +32,7 @@ public class CommandGroupAuto extends CommandGroup {
 				addSequential(new autoFwdLeftSwitch());
 				addSequential(new intakeOutAuto());
 			} else { //Cross the line
-				addSequential(new autoFwdRightScale());
+				addSequential(new autoFwdCrossFieldPosition());
 				addSequential(new turnRight90());
 				addSequential(new autoFwdCrossLine());
 			}
@@ -49,7 +49,7 @@ public class CommandGroupAuto extends CommandGroup {
 				addSequential(new autoFwdRightSwitch());
 				addSequential(new intakeOutAuto());
 			} else { //Cross the line
-				addSequential(new autoFwdLeftScale());
+				addSequential(new autoFwdCrossFieldPosition());
 				addSequential(new turnLeft90());
 				addSequential(new autoFwdCrossLine());
 			}			
@@ -69,21 +69,7 @@ public class CommandGroupAuto extends CommandGroup {
 			}
 			break;
 		case DANCE_PARTY:
-			addSequential(new autoFwdCrossDanceLine());
-			addSequential(new autoChill());
-			addSequential(new autoBackUpSome());
-			addSequential(new autoChill());
-			addSequential(new turnLeft90());
-			addSequential(new autoChill());
-			addSequential(new turnRight90());
-			addSequential(new turnRight90());
-			addSequential(new autoChill());
-			addParallel(new elevatorUpSwitchAuto());
-			addSequential(new turnLeft90());
-			addSequential(new turnLeft90());
-			addSequential(new turnLeft90());
-			addSequential(new autoChill());
-			addSequential(new autoBackUpSome());
+			addSequential(new autoFwdCrossLine());
 		}
 	}
 }

@@ -54,7 +54,7 @@ public class autoLeftScoreFwd extends Command {
     // Make this return true when this Command no longer needs to run execute()
     @Override
     protected boolean isFinished() {
-        return Robot.driveTrain.getEncoderDistance() > 38 || isTimedOut();
+        return Robot.driveTrain.getEncoderDistance() > 44 || isTimedOut();
     }
 
     // Called once after isFinished returns true

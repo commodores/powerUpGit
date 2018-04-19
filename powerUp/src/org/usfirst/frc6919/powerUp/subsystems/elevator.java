@@ -90,7 +90,7 @@ public class elevator extends Subsystem {
     }
     
     public void intakeAngle(double setPoint) {
-    	raiseServos.set(setPoint);
+    	raiseServos.set(setPoint + .3);
     }
 
 }

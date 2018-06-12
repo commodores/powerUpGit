@@ -65,8 +65,8 @@ public class driveManual extends Command {
     		left = Robot.oi.gamePad.getRawAxis(1);
         	right = Robot.oi.gamePad.getRawAxis(5);
     	} else {
-    		left = Robot.oi.gamePad.getRawAxis(1) * .70;
-        	right = Robot.oi.gamePad.getRawAxis(5) * .70;
+    		left = Robot.oi.gamePad.getRawAxis(1) * .90;
+        	right = Robot.oi.gamePad.getRawAxis(5) * .90;
     	}
     	
     	Robot.driveTrain.drive(-left, -right);

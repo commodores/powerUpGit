@@ -50,6 +50,7 @@ public class autoFwdCrossLine extends Command {
     protected void execute() {
     	double pTerm = Robot.driveTrain.driveTrainGain * (0.0 - Robot.driveTrain.getIMUAngle());
     	Robot.driveTrain.drive(.8 + pTerm, .8 - pTerm);
+    	System.out.println("Gyro: " + Robot.driveTrain.getIMUAngle());
     }
 
     // Make this return true when this Command no longer needs to run execute()
